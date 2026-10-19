@@ -1,0 +1,40 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "MELTROOM",
+      "hasCanvas": false,
+      "bodyTextLen": 14500,
+      "bodyTextHash": "86cadb63a04d4594e8f447c4bd6455364c147947f03cce3c96e0352d971f4e3d",
+      "bodyTextPrefix": "ﾀ ｵ ﾆ ｱ ﾋ ﾂ ｼ ｷ ﾐ ｶ ｦ ﾒ 9 4 9 4 8 6 D 8 A 2 2 E B E 1 1 F C 5 4 ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "MELTROOM",
+      "hasCanvas": false,
+      "bodyTextLen": 14486,
+      "bodyTextHash": "7d1d3435637e975f85a519b85deb61f0b5cc18bc0f4cb2a7b64b04feebc91e88",
+      "bodyTextPrefix": "ﾀ ｵ ﾆ ｱ ﾋ ﾂ ｼ ｷ ﾐ ｶ ｦ ﾒ 9 4 9 4 8 6 D 8 A 2 2 E B E 1 1 F C 5 4 ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-built.json",
+  "divergesFromBaseline": true,
+  "baselineReasons": [
+    "mobile: body text changed (1966 -> 14486 chars, hash mismatch)"
+  ]
+}

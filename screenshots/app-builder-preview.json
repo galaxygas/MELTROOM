@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "MELTROOM",
+      "hasCanvas": false,
+      "bodyTextLen": 14500,
+      "bodyTextHash": "bcdcc642e46be75f3f7c52b8aed85db3cdbe0b2922c3242250e6d842e517dd0c",
+      "bodyTextPrefix": "ﾀ ｵ ﾆ ｱ ﾋ ﾂ ｼ ｷ ﾐ ｶ ｦ ﾒ 9 4 9 4 8 6 D 8 A 2 2 E B E 1 1 F C 5 4 ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "MELTROOM",
+      "hasCanvas": false,
+      "bodyTextLen": 1966,
+      "bodyTextHash": "c6afa11443f30c4444cd060ba54d83c056fb70ed33a5854db798223768ff100b",
+      "bodyTextPrefix": "MELTROOM root@codec · mpeg-4 asp datamosh Vectors Stills AWAITIN",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}

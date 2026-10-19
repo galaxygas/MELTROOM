@@ -1,0 +1,285 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #050203;
+  --color-surface: #12080c;
+  --color-raised: #1c0c12;
+  --color-fg: #f6e8ea;
+  --color-muted: #c9929a;
+  --color-accent: #ff2436;
+  --color-border: #5c2230;
+  --font-sans: "M PLUS 1 Code", "IPAGothic", "WenQuanYi Zen Hei Mono", ui-monospace, monospace;
+  --font-display: "Tektur", "M PLUS 1 Code", sans-serif;
+  --font-mono: "M PLUS 1 Code", "IPAGothic", ui-monospace, monospace;
+  --radius-sm: 0px;
+}
+
+@layer base {
+  html {
+    background: var(--color-bg);
+    color: var(--color-fg);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+    line-height: 1.5;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  button:disabled {
+    cursor: not-allowed;
+  }
+
+  button {
+    transition-property: background-color, color, border-color, transform;
+    transition-duration: 150ms;
+    transition-timing-function: ease-out;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background: var(--color-accent);
+    color: var(--color-bg);
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+}
+
+.frame {
+  position: relative;
+  background-color: color-mix(in oklab, var(--color-surface) 94%, transparent);
+  border: 1px solid color-mix(in oklab, var(--color-accent) 42%, black);
+}
+
+.frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background-image:
+    linear-gradient(var(--color-accent), var(--color-accent)),
+    linear-gradient(var(--color-accent), var(--color-accent)),
+    linear-gradient(var(--color-accent), var(--color-accent)),
+    linear-gradient(var(--color-accent), var(--color-accent)),
+    linear-gradient(var(--color-accent), var(--color-accent)),
+    linear-gradient(var(--color-accent), var(--color-accent)),
+    linear-gradient(var(--color-accent), var(--color-accent)),
+    linear-gradient(var(--color-accent), var(--color-accent));
+  background-repeat: no-repeat;
+  background-size:
+    12px 2px,
+    2px 12px,
+    12px 2px,
+    2px 12px,
+    12px 2px,
+    2px 12px,
+    12px 2px,
+    2px 12px;
+  background-position:
+    left -1px top -1px,
+    left -1px top -1px,
+    right -1px top -1px,
+    right -1px top -1px,
+    left -1px bottom -1px,
+    left -1px bottom -1px,
+    right -1px bottom -1px,
+    right -1px bottom -1px;
+}
+
+.kicker {
+  color: var(--color-accent);
+  letter-spacing: 0.16em;
+  font-size: 0.75rem;
+}
+
+.kicker::before {
+  content: "// ";
+  opacity: 0.65;
+}
+
+.btn-hot {
+  background: var(--color-accent);
+  color: var(--color-bg);
+  box-shadow: 0 0 22px color-mix(in oklab, var(--color-accent) 32%, transparent);
+}
+
+.btn-hot:hover:not(:disabled) {
+  background: color-mix(in oklab, var(--color-accent) 84%, white);
+}
+
+.btn-hot:active:not(:disabled) {
+  transform: scale(0.985);
+}
+
+.btn-line {
+  border: 1px solid color-mix(in oklab, var(--color-accent) 58%, transparent);
+  background: color-mix(in oklab, var(--color-bg) 72%, transparent);
+  color: var(--color-fg);
+}
+
+.btn-line:hover:not(:disabled) {
+  background: color-mix(in oklab, var(--color-accent) 16%, transparent);
+}
+
+.matrix-field {
+  display: flex;
+  justify-content: space-between;
+  font-family: "M PLUS 1 Code", IPAGothic, "WenQuanYi Zen Hei Mono", ui-monospace, monospace;
+  font-size: 15px;
+  line-height: 1;
+}
+
+.matrix-col {
+  flex: 0 0 auto;
+  width: 1em;
+  height: 100%;
+  overflow: hidden;
+}
+
+.matrix-track,
+.rain-half {
+  display: block;
+}
+
+.matrix-track {
+  margin: 0;
+  font: inherit;
+  line-height: 1;
+  will-change: transform;
+}
+
+.rain-drop,
+.rain-head,
+.rain-body,
+.rain-tail,
+.rain-gap {
+  display: block;
+  white-space: pre;
+  line-height: 1;
+}
+
+.rain-head {
+  color: #fff6f7;
+  text-shadow: 0 0 6px var(--color-accent);
+}
+
+.rain-body {
+  color: #ff3144;
+}
+
+.rain-tail {
+  color: #8e1824;
+}
+
+.frame-stage {
+  background-color: color-mix(in oklab, var(--color-bg) 35%, transparent);
+}
+
+.stage-scrim {
+  background: linear-gradient(
+    to top,
+    var(--color-bg) 0%,
+    color-mix(in oklab, var(--color-bg) 82%, transparent) 46%,
+    transparent 100%
+  );
+}
+
+.scanlines {
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0 2px,
+    color-mix(in oklab, black 35%, transparent) 2px 3px
+  );
+  opacity: 0.12;
+}
+
+.sweep {
+  height: 22vh;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    color-mix(in oklab, var(--color-accent) 16%, transparent),
+    transparent
+  );
+  animation: sweep 11s linear infinite;
+  will-change: transform;
+}
+
+.caret {
+  display: inline-block;
+  width: 0.55ch;
+  height: 0.82em;
+  margin-left: 0.14em;
+  background: var(--color-accent);
+  vertical-align: -0.05em;
+  animation: blink 1.05s steps(1) infinite;
+}
+
+.sigil-core {
+  animation: pulse 2.4s ease-in-out infinite;
+}
+
+@keyframes sweep {
+  from {
+    transform: translateY(-30vh);
+  }
+  to {
+    transform: translateY(120vh);
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
